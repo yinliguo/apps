@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/app.js",
-  mode: "development",
+  mode: process.env.NODE_ENV == "production" ? "production" : "development",
   output: {
     filename: "app.[hash:8].js",
     path: path.resolve(__dirname),

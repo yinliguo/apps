@@ -3,12 +3,14 @@ import "./app.scss";
 import "swiper/swiper.scss";
 import Swiper, {Pagination, Autoplay} from "swiper";
 
+const isDevelopment = process.env.NODE_ENV == "development";
+
 Swiper.use([Pagination, Autoplay]);
 
 const apps = [
   {
     name: "Danger Around",
-    dir: "/danger-around/apps",
+    dir: "/danger-around/" + (isDevelopment ? "" : "apps/"),
     icon: "logo.png",
     desc:
       "Life is in a circle, facing uncertainties, bad or good, so we should learn how to avoid danger, pursue happiness.",
