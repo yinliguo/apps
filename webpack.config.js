@@ -5,7 +5,7 @@ module.exports = {
   entry: "./src/app.js",
   mode: process.env.NODE_ENV == "production" ? "production" : "development",
   output: {
-    filename: "app.[hash:8].js",
+    filename: "app.[fullhash:8].js",
     path: path.resolve(__dirname),
   },
   devServer: {

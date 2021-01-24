@@ -10,7 +10,7 @@ Swiper.use([Pagination, Autoplay]);
 const apps = [
   {
     name: "Danger Around",
-    dir: "/danger-around/" + (isDevelopment ? "" : "apps/"),
+    dir:  (isDevelopment ? "" : "/apps") + "/danger-around/",
     icon: "logo.png",
     desc:
       "Life is in a circle, facing uncertainties, bad or good, so we should learn how to avoid danger, pursue happiness.",
