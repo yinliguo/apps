@@ -11,25 +11,25 @@ const apps = [
   {
     name: 'Danger Around',
     dir: (isDevelopment ? '' : '/apps') + '/danger-around/',
-    icon: 'logo.png',
+    icon: 'logo.jpg',
     desc:
       'Life is in a circle, facing uncertainties, bad or good, so we should learn how to avoid danger, pursue happiness.',
     screenshots: [
-      '5.5-1.png',
-      '5.5-2.png',
-      '5.5-3.png',
-      '5.5-4.png',
-      '5.5-5.png',
-      '5.5-6.png',
+      '5.5-1.jpg',
+      '5.5-2.jpg',
+      '5.5-3.jpg',
+      '5.5-4.jpg',
+      '5.5-5.jpg',
+      '5.5-6.jpg',
     ],
   },
   {
     name: 'Flipart',
     dir: (isDevelopment ? '' : '/apps') + '/flipair/',
-    icon: 'logo.png',
+    icon: 'logo.jpg',
     desc:
       'Remember card contents, find the same cards. You can use some special memory methods to earn more score. The game aim to train your working memory. 2P mode supports you play with your family or friends.',
-    screenshots: ['5.5-1.png', '5.5-2.png', '5.5-3.png'],
+    screenshots: ['5.5-1.jpg', '5.5-2.jpg', '5.5-3.jpg'],
   },
 ];
 
