@@ -26,11 +26,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    margin: 0 20px;
     cursor: pointer;
     transition: box-shadow 0.3s linear;
 
     &:hover {
-      box-shadow: 0 0 10px 1px #cccccc;
+      box-shadow: 0 0 20px 1px #555555;
     }
   }
 }
