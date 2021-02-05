@@ -67,14 +67,14 @@
   text-align: center;
   a {
     display: inline-block;
-    width: 100px;
+    width: 120px;
     height: 30px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 10px;
     }
   }
 }

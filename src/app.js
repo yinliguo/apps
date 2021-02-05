@@ -7,13 +7,14 @@ import googleStore from './images/google-play.png';
 
 const isDevelopment = process.env.NODE_ENV == 'development';
 const root = isDevelopment ? '/' : '/apps/';
+console.log(root);
 
 Swiper.use([Pagination, Autoplay]);
 
 const apps = [
   {
     name: 'Danger Around',
-    dir: (isDevelopment ? '' : '/apps') + '/danger-around/',
+    dir: root + 'danger-around/',
     icon: 'logo.jpg',
     desc:
       'Life is in a circle, facing uncertainties, bad or good, so we should learn how to avoid danger, pursue happiness.',
@@ -30,7 +31,7 @@ const apps = [
   },
   {
     name: 'Flipart',
-    dir: (isDevelopment ? '' : '/apps') + '/flipair/',
+    dir: root + '/flipair/',
     icon: 'logo.jpg',
     desc:
       'Remember card contents, find the same cards. You can use some special memory methods to earn more score. The game aim to train your working memory. 2P mode supports you play with your family or friends.',

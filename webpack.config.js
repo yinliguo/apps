@@ -1,9 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const isDev = process.env.NODE_ENV == 'development';
+
 module.exports = {
   entry: './src/app.js',
-  mode: process.env.NODE_ENV == 'production' ? 'production' : 'development',
+  mode: isDev ? 'development' : 'production',
   output: {
     filename: 'app.[fullhash:8].js',
     path: path.resolve(__dirname, 'dist'),
@@ -36,7 +38,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Hello Apps',
       template: './src/index.html',
-      filename: '../index.html',
+      filename: isDev ? 'index.html' : '../index.html',
     }),
   ],
 };
