@@ -2,8 +2,11 @@ import './reset.scss';
 import './app.scss';
 import 'swiper/swiper.scss';
 import Swiper, { Pagination, Autoplay } from 'swiper';
+import appStore from './images/app-store.png';
+import googleStore from './images/google-play.png';
 
 const isDevelopment = process.env.NODE_ENV == 'development';
+const root = isDevelopment ? '/' : '/apps/';
 
 Swiper.use([Pagination, Autoplay]);
 
@@ -22,6 +25,8 @@ const apps = [
       '5.5-5.jpg',
       '5.5-6.jpg',
     ],
+    google: 'com.yinliguo.DangerAround',
+    apple: '1550426347',
   },
   {
     name: 'Flipart',
@@ -30,6 +35,8 @@ const apps = [
     desc:
       'Remember card contents, find the same cards. You can use some special memory methods to earn more score. The game aim to train your working memory. 2P mode supports you play with your family or friends.',
     screenshots: ['5.5-1.jpg', '5.5-2.jpg', '5.5-3.jpg'],
+    google: 'com.yinliguo.FlipCard',
+    apple: '1550543042',
   },
 ];
 
@@ -55,6 +62,11 @@ const myswiper = new Swiper('.swiper-container', {
   },
 });
 
+const appleLinkEl = document.getElementById('appstore');
+appleLinkEl.style.backgroundImage = 'url(' + appStore + ')';
+const googleLinkEl = document.getElementById('googleplay');
+googleLinkEl.style.backgroundImage = 'url(' + googleStore + ')';
+
 apps.forEach((item) => {
   const iconEl = document.createElement('li');
   iconEl.className = 'icon';
@@ -75,6 +87,9 @@ apps.forEach((item) => {
     });
     myswiper.update();
     myswiper.slideTo(0);
+
+    googleLinkEl.href = 'market://details?id=' + item.google;
+    appleLinkEl.href = 'itms-apps://itunes.apple.com/app/' + item.apple;
   });
 });
 
