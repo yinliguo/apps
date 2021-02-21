@@ -7,7 +7,6 @@ import googleStore from './images/google-play.png';
 
 const isDevelopment = process.env.NODE_ENV == 'development';
 const root = isDevelopment ? '/' : '/apps/';
-console.log(root);
 
 Swiper.use([Pagination, Autoplay]);
 
@@ -26,10 +25,8 @@ const apps = [
       '5.5-5.jpg',
       '5.5-6.jpg',
     ],
-    google: 'com.yinliguo.DangerAround',
+    google: 'https://play.google.com/store/apps/details?id=com.yinliguo.DangerAround',
     apple: 'https://apps.apple.com/us/app/dangers-around/id1550426347',
-    appleCN:
-      'https://apps.apple.com/us/app/%E5%9B%9B%E9%9D%A2%E6%A5%9A%E6%AD%8C-cn/id1551991955',
   },
   {
     name: 'Flipair',
@@ -38,10 +35,8 @@ const apps = [
     desc:
       'Remember card contents, find the same cards. You can use some special memory methods to earn more score. The game aim to train your working memory. 2P mode supports you play with your family or friends.',
     screenshots: ['5.5-1.jpg', '5.5-2.jpg', '5.5-3.jpg'],
-    google: 'com.yinliguo.FlipCard',
+    google: 'https://play.google.com/store/apps/details?id=com.yinliguo.FlipCard',
     apple: 'https://apps.apple.com/us/app/flipair/id1550543042',
-    appleCN:
-      'https://apps.apple.com/us/app/%E7%BF%BB%E8%BD%AC%E5%8D%A1%E7%89%8C-cn/id1551974511',
   },
 ];
 
@@ -71,8 +66,6 @@ const appleLinkEl = document.getElementById('appstore');
 appleLinkEl.style.backgroundImage = 'url(' + appStore + ')';
 const googleLinkEl = document.getElementById('googleplay');
 googleLinkEl.style.backgroundImage = 'url(' + googleStore + ')';
-const appleCNLinkEl = document.getElementById('appstore-cn');
-appleCNLinkEl.style.backgroundImage = 'url(' + appStore + ')';
 
 apps.forEach((item) => {
   const iconEl = document.createElement('li');
@@ -95,9 +88,8 @@ apps.forEach((item) => {
     myswiper.update();
     myswiper.slideTo(0);
 
-    googleLinkEl.href = 'market://details?id=' + item.google;
+    googleLinkEl.href = item.google;
     appleLinkEl.href = item.apple;
-    appleCNLinkEl.href = item.appleCN;
   });
 });
 
